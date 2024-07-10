@@ -1,0 +1,13 @@
+**.aux
+**.bbl*
+**.fls
+**.log
+**.fdb*
+
+/svg-inkscape
+/Figures
+/main.*
+
+!main.tex
+!main.pdf
+main.bbl-SAVE-ERROR
