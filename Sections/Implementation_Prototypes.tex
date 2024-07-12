@@ -1,5 +1,5 @@
 \section{Implementation and Prototypes}
-This research was originally born from the willingness to explore the possibility of exploiting the technology of flexible coil inductors by using one produced by the research group \textbf{Helmholtz-Zentrum Dresden-Rossendorf} (HZDR) in Dresden, Germany \cite{HZDR}.
+This research was originally born from the willingness to explore the possibility of exploiting the technology of flexible coil inductors by using one produced by the research group \textbf{Helmholtz-Zentrum Dresden-Rossendorf} (HZDR) in Dresden, Germany.
 After testing this coil, we realized its \textbf{limitations} and decided to explore other alternatives, such as flexible PCB coils.
 Flexible PCB coils are much sturdier than the HZDR coil, easily designable and manufacturable, and have a much higher power rating.
 The low power rating meant that the HZDR coil was not able to generate a magnetic field strong enough for our application.
@@ -77,3 +77,77 @@ We also had to add a small blowing fan to the heatsink to keep the coil cool as 
 \subsection{Flexible Mat Prototypes}
 The final prototype was designed to be a flexible silicon mat where all components were integrated, including the membrane.
 
+\newsavebox{\largestimage}
+\begin{figure}[H]
+    \centering
+    \savebox{\largestimage}{\includegraphics[width=0.2\textwidth]{Figures/membrane_v1.png}}
+    \begin{subcaptiongroup}
+        \centering
+        \parbox[b]{0.2\textwidth}{
+            \centering
+            \usebox{
+                \largestimage
+            }
+        }
+        \parbox[b]{0.2\textwidth}{
+            \centering
+            \raisebox{\dimexpr.5\ht\largestimage-.5\height}{
+                \includegraphics[width=0.2\textwidth]{Figures/membrane_v2_section.png}
+            }
+        }
+    \end{subcaptiongroup}
+    \caption{Top and section view of the flexible mat prototype}
+\end{figure}
+The magnet is suspended inside the silicon membrane and the coil is kept in place at the bottom of the mat.
+The coil is kept inside the silicone structure thanks to a flexible component that is in part encased in the silicon and acts as a trap.
+
+\newsavebox{\bigimage}
+\begin{figure}[H]
+    \centering
+    \savebox{\bigimage}{\includegraphics[width=0.2\textwidth]{Figures/coil_trap_in_mat.png}}
+    \begin{subcaptiongroup}
+        \centering
+        \parbox[b]{0.2\textwidth}{
+            \centering
+            \raisebox{\dimexpr.5\ht\bigimage-.5\height}{
+                \includegraphics[width=0.15\textwidth]{Figures/coil_trap_expl.png}
+            }
+        }
+        \parbox[b]{0.2\textwidth}{
+            \centering
+            \usebox{
+                \bigimage
+            }
+        }
+        
+    \end{subcaptiongroup}
+    \caption{Flexible coil trap.}
+\end{figure}
+
+This component allows the coil to be kept at an optimal distance from the magnet letting the membrane be free to vibrate.
+This prototype resulted in the best performance, the vibrations were more noticeable, the mat was easy to interact with and the device could easily flex.
+Nevertheless, we were not still satisfied with the strength of the vibrations it produced, the coil's problems with heating were still present, we had some fragility problems with the membrane and flexing issues with the coil trap. 
+
+\subsection{Experimentation and Evaluation}
+We conducted both tests on the standalone coil and the last prototype. We mainly focused on measuring the heating production of the coil and the force produced by the prototype membrane.
+\subsubsection{Heating Testing}
+We powered the coil with an input voltage sweep both in DC and AC conditions while measuring its surface temperature using a thermocouple. The limit of the sweep was chosen to be the maximum voltage that the coil could handle before reaching its thermal runaway point.
+We then repeated the tests using two coils connected in parallel.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5\linewidth]{Figures/Temp_vs_Volt_1_coil.png}
+    \caption{Temperature vs Voltage for one coil.}
+    \label{fig: Single_coil_heating_tests}
+\end{figure}
+As we can observe in figure \ref{fig: Single_coil_heating_tests}, in AC conditions, especially for unipolar signals, the coil can sustain higher voltages; this is because sinusoidal signals have a lower RMS value than DC ones.
+
+\subsubsection{Force Testing}
+We measured the force produced by the membrane using an ATI TW-Nano17 force sensor. The prototype's coil was powered with a heartbeat-like signal, as it's a very low RMS signal that allows us to run the coil at 30V peak voltage.
+This was necessary because the sensor sensitivity was too low to measure the force produced by the same sinusoidal signals at 6V we used for the heating tests.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5\linewidth]{Figures/Fz_@30V_small_magn_idealgen.png}
+    \caption{Force profile of the last prototype run with the heartbeat signal.}
+    \label{fig: Force_profile}
+\end{figure}
+From figure \ref{fig: Force_profile} we can observe that the membrane produces a constant force of about 0.2N, due to the silicone membrane itself, and the net force produced by the coil at the peak of the signal is in the order of $5\cdot10^{-5}N$.
