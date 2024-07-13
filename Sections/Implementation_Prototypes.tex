@@ -1,20 +1,20 @@
 \section{Implementation and Prototypes}
-This research was originally born from the willingness to explore the possibility of exploiting the technology of flexible coil inductors by using one produced by the research group \textbf{Helmholtz-Zentrum Dresden-Rossendorf} (HZDR) in Dresden, Germany.
-After testing this coil, we realized its \textbf{limitations} and decided to explore other alternatives, such as flexible PCB coils.
+This research was originally born from the idea of exploiting the technology of flexible coil inductors by using one produced by the HZDR research group.
+After testing this coil, we realized its limitations and decided to explore other alternatives, such as flexible PCB coils.
 Flexible PCB coils are much sturdier than the HZDR coil, easily designable and manufacturable, and have a much higher power rating.
 The low power rating meant that the HZDR coil was not able to generate a magnetic field strong enough for our application.
 
 \subsection{Rigid Prototype}
 The first prototype was designed to test the capabilities of the Dresden coils.
-In the previous research done by the HZDR team, they tested the coil using a simple piece of \textbf{flexible magnetic tape as a membrane}.
-This membrane is shaped like a "fish" so the tail can be fixed on a plane and the head can be \textbf{free to bend} up and down.
+In the previous research done by the HZDR team, they tested the coil using a simple piece of flexible magnetic tape as a membrane.
+This membrane is shaped like a "fish" so the tail can be fixed on a plane and the head can be free to bend up and down.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.2\linewidth]{Figures/Dresden_test.png}
     \caption{Dresden coil HZDR test setup}
     \label{fig: Dresden_test}
 \end{figure}
-The pulp needed to be suspended at a certain distance to \textbf{avoid pressing} on the membrane, this would have caused the membrane to \textbf{stop vibrating}.
+The pulp needed to be suspended at a certain distance to avoid pressing and stopping the membrane.
 
 To solve this problem we developed a structure able to keep the coil and membrane at a certain distance from the pulp.
 \begin{figure}[H]
@@ -71,7 +71,7 @@ The silicon sleeve could be then connected to the assembly where the coil and he
     \caption{Bottom and top view of the real prototype}
 \end{figure}
 This prototype is much better than the previous one, the magnet was kept at the right distance from the coil and the vibrations were much more noticeable, also being wearable made it much easier to use.
-Its biggest problem was the silicon sleeve, as the silicon tends to absorb some of the vibrations and the softness of the material made the mounting mechanism a bit finicky.  
+Its biggest problem was the silicon sleeve, as the silicon tends to absorb some of the vibrations and the softness of the material made the mounting mechanism a bit unreliable.  
 We also had to add a small blowing fan to the heatsink to keep the coil cool as it would heat a lot after a few minutes of use.
 
 \subsection{Flexible Mat Prototypes}
@@ -125,14 +125,13 @@ The coil is kept inside the silicone structure thanks to a flexible component th
 \end{figure}
 
 This component allows the coil to be kept at an optimal distance from the magnet letting the membrane be free to vibrate.
-This prototype resulted in the best performance, the vibrations were more noticeable, the mat was easy to interact with and the device could easily flex.
-Nevertheless, we were not still satisfied with the strength of the vibrations it produced, the coil's problems with heating were still present, we had some fragility problems with the membrane and flexing issues with the coil trap. 
+This prototype resulted in the best performances, the vibrations were more noticeable, the mat was easy to interact with and the device could easily flex.
+Nevertheless, we were not still satisfied with the strength of the vibrations it produced, the coil's problems with heating were still present and we had some fragility problems with the membrane and flexing issues with the coil trap. 
 
 \subsection{Experimentation and Evaluation}
-We conducted both tests on the standalone coil and the last prototype. We mainly focused on measuring the heating production of the coil and the force produced by the prototype membrane.
+During our testing, we measured the heating production of the coil and the force produced by the last prototype membrane.
 \subsubsection{Heating Testing}
 We powered the coil with an input voltage sweep both in DC and AC conditions while measuring its surface temperature using a thermocouple. The limit of the sweep was chosen to be the maximum voltage that the coil could handle before reaching its thermal runaway point.
-We then repeated the tests using two coils connected in parallel.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.5\linewidth]{Figures/Temp_vs_Volt_1_coil.png}
@@ -143,11 +142,11 @@ As we can observe in figure \ref{fig: Single_coil_heating_tests}, in AC conditio
 
 \subsubsection{Force Testing}
 We measured the force produced by the membrane using an ATI TW-Nano17 force sensor. The prototype's coil was powered with a heartbeat-like signal, as it's a very low RMS signal that allows us to run the coil at 30V peak voltage.
-This was necessary because the sensor sensitivity was too low to measure the force produced by the same sinusoidal signals at 6V we used for the heating tests.
+This was necessary because the sensor sensitivity was too low to measure the force produced by sinusoidal signals at 6V.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.5\linewidth]{Figures/Fz_@30V_small_magn_idealgen.png}
     \caption{Force profile of the last prototype run with the heartbeat signal.}
     \label{fig: Force_profile}
 \end{figure}
-From figure \ref{fig: Force_profile} we can observe that the membrane produces a constant force of about 0.2N, due to the silicone membrane itself, and the net force produced by the coil at the peak of the signal is in the order of $5\cdot10^{-5}N$.
+From figure \ref{fig: Force_profile} we can observe that the membrane produces a constant force of about 0.2N, due to the silicone membrane itself, and the net force produced by the coil at the peak of the signal is in the order of $5\cdot10^{-5}$N.

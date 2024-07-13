@@ -288,6 +288,7 @@
 \def\@ptsize{0}
 % LaTeX does not support 9pt, so we set \@ptsize to 0 - same as that of 10pt
 \DeclareOption{9pt}{\def\CLASSOPTIONpt{9}\def\@ptsize{0}}
+\DeclareOption{9.5pt}{\def\CLASSOPTIONpt{9.5}\def\@ptsize{3}}
 \DeclareOption{10pt}{\def\CLASSOPTIONpt{10}\def\@ptsize{0}}
 \DeclareOption{11pt}{\def\CLASSOPTIONpt{11}\def\@ptsize{1}}
 \DeclareOption{12pt}{\def\CLASSOPTIONpt{12}\def\@ptsize{2}}
