@@ -2665,7 +2665,7 @@
 % Double Column Floats
 \dblfloatsep 0.85\baselineskip plus  0.2\baselineskip minus  0.2\baselineskip
 
-\dbltextfloatsep 1.55\baselineskip plus  0.2\baselineskip minus  0.4\baselineskip
+\dbltextfloatsep 1\baselineskip plus  0.2\baselineskip minus  0.4\baselineskip
 % Note that it would be nice if the rubber here actually worked in LaTeX2e.
 % There is a long standing limitation in LaTeX, first discovered (to the best
 % of my knowledge) by Alan Jeffrey in 1992. LaTeX ignores the stretchable
@@ -2683,7 +2683,7 @@
 \def\dblfloatpagefraction{0.8}
 \setcounter{dbltopnumber}{4}
 
-\intextsep 0.85\baselineskip plus 0.2\baselineskip minus  0.2\baselineskip
+\intextsep 0.1\baselineskip plus 0.2\baselineskip minus  0.2\baselineskip
 \setcounter{topnumber}{2}
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{4}
